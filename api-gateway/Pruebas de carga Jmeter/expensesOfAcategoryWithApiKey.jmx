@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.5">
+  <hashTree>
+    <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP request" enabled="true">
+      <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="startDate" elementType="HTTPArgument">
+            <boolProp name="HTTPArgument.always_encode">false</boolProp>
+            <stringProp name="Argument.value">1992-07-18T03:00:00.000Z</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <boolProp name="HTTPArgument.use_equals">true</boolProp>
+            <stringProp name="Argument.name">startDate</stringProp>
+          </elementProp>
+          <elementProp name="endDate" elementType="HTTPArgument">
+            <boolProp name="HTTPArgument.always_encode">false</boolProp>
+            <stringProp name="Argument.value">2022-09-23T00:23:40.749Z</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <boolProp name="HTTPArgument.use_equals">true</boolProp>
+            <stringProp name="Argument.name">endDate</stringProp>
+          </elementProp>
+        </collectionProp>
+      </elementProp>
+      <stringProp name="HTTPSampler.domain">localhost</stringProp>
+      <stringProp name="HTTPSampler.port">8080</stringProp>
+      <stringProp name="HTTPSampler.protocol">http</stringProp>
+      <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+      <stringProp name="HTTPSampler.path">/api/expenses/category/</stringProp>
+      <stringProp name="HTTPSampler.method">GET</stringProp>
+      <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+      <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+      <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+      <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+      <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+      <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+      <stringProp name="HTTPSampler.response_timeout"></stringProp>
+    </HTTPSamplerProxy>
+    <hashTree/>
+  </hashTree>
+</jmeterTestPlan>

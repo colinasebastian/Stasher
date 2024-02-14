@@ -1,0 +1,27 @@
+{
+  "name": "stasher-subscription-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/cors": "^4.0.0",
+    "amqplib": "^0.10.3",
+    "axios": "^1.2.0",
+    "dotenv": "^16.0.3",
+    "koa": "^2.13.4",
+    "koa-bodyparser": "^4.3.0",
+    "koa-newrelic": "^2.0.3",
+    "koa-router": "^12.0.0",
+    "minimist": "^1.2.7",
+    "mysql2": "^2.3.3",
+    "newrelic": "^9.7.0",
+    "nodemailer": "^6.8.0",
+    "sequelize": "^6.25.7",
+    "winston": "^3.8.2"
+  }
+}

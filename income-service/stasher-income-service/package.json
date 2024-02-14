@@ -1,0 +1,30 @@
+{
+  "name": "stasher-incomes-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.204.0",
+    "@koa/cors": "^4.0.0",
+    "@koa/multer": "^3.0.0",
+    "axios": "^1.2.0",
+    "collections": "^5.1.13",
+    "dotenv": "^16.0.3",
+    "koa": "^2.13.4",
+    "koa-bodyparser": "^4.3.0",
+    "koa-newrelic": "^2.0.3",
+    "koa-router": "^12.0.0",
+    "mysql2": "^2.3.3",
+    "newrelic": "^9.5.0",
+    "redis": "^4.4.0",
+    "sequelize": "^6.25.3",
+    "sharp": "^0.31.2",
+    "winston": "^3.8.2"
+  }
+}

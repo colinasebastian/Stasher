@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Incomes</h2>
+        <table border="1" cellspacing="0">
+            <thead>
+               <tr bgcolor="#D7DBD3" align="center">
+                <th>Amount</th>
+                <th>Produced Date</th>
+               </tr>
+            </thead>
+            <tbody>
+               {% for income in incomes %}
+               <tr>
+                  {% for col in income %}
+                     {% if col == 'amount' %}
+                        <td align="center">{{ income[col] }}</td>
+                     {% endif %}
+                     {% if col == 'producedDate' %}
+                        <td>{{ income[col] }}</td>
+                     {% endif %}
+                  {% endfor %}
+               </tr>
+               {% endfor %}
+            </tbody>
+         </table>
+         <h4>Total Incomes: {{totalAmountIncomes}}</h4>
+
+         <h2>Expenses</h2>
+         <table border="1" cellspacing="1">
+             <thead>
+                <tr bgcolor="#D7DBD3" align="center">
+                   <th>Amount</th>
+                   <th>Produced Date</th>
+                </tr>
+             </thead>
+             <tbody>
+               {% for expense in expenses %}
+               <tr>
+                  {% for col in expense %}
+                     {% if col == 'amount' %}
+                        <td align="center">{{ expense[col] }}</td>
+                     {% endif %}
+                     {% if col == 'producedDate' %}
+                        <td>{{ expense[col] }}</td>
+                     {% endif %}
+                  {% endfor %}
+               </tr>
+               {% endfor %}
+             </tbody>
+          </table>
+          <h4>Total Expenses: {{totalAmountExpenses}}</h4>
+
+          <h3>Balance: {{totalBalance}}</h3>
+    </body>
+</html>

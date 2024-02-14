@@ -1,0 +1,30 @@
+{
+  "name": "stasher-users-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/cors": "^4.0.0",
+    "config": "^3.3.8",
+    "dotenv": "^16.0.3",
+    "generate-api-key": "^1.0.2",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.13.4",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^12.0.0",
+    "md5": "^2.3.0",
+    "minimist": "^1.2.7",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "newrelic": "^9.7.0",
+    "nodemailer": "^6.8.0",
+    "sequelize": "^6.25.3",
+    "winston": "^3.8.2"
+  }
+}

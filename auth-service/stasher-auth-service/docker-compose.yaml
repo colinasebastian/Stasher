@@ -1,0 +1,30 @@
+version: "3.8"
+
+networks:
+  stasher-network:
+
+services:
+    
+  redis: 
+    image: redis
+    container_name: redis
+    ports:
+      - "6379:6379"
+    networks:
+      - stasher-network
+
+  stasher-auth-service:
+    container_name: stasher-auth-service
+    depends_on:
+      redis:
+        condition: service_started
+    build: .
+    command: [ "node", "-r", "newrelic", "index.js" ]
+    ports:
+      - "6062:6062"
+    env_file: .env 
+    networks:
+      - stasher-network
+    tty: true
+
+  

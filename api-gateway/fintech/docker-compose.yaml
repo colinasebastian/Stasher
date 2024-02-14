@@ -1,0 +1,22 @@
+version: "3.8"
+
+networks:
+  stasher-network:
+    driver: bridge
+    ipam:
+      driver: default
+
+services:
+
+  stasher-gateway-service:
+    container_name: stasher-gateway-service
+    build: .
+    command: ["node", "-r", "newrelic", "index.js"]
+    ports:
+      - "8080:8080"
+    env_file: .env 
+    networks:
+      - stasher-network
+    tty: true
+
+  

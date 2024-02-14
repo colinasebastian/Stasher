@@ -1,0 +1,42 @@
+version: "3.8"
+
+networks:
+  stasher-network:
+    driver: bridge
+    ipam:
+      driver: default
+
+services:
+  mysql:
+    image: mysql
+    container_name: mysql
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_DATABASE=${DB_NAME}
+      - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
+    networks:
+      - stasher-network
+    healthcheck:
+      test: "/usr/bin/mysql --user=${DB_USER} --password=${DB_PASSWORD} --execute \"SHOW DATABASES;\""
+      interval: 2s
+      timeout: 20s
+      retries: 10
+
+  stasher-users-service:
+    container_name: stasher-users-service
+    depends_on:
+      mysql:
+        condition: service_healthy
+    build: .
+    command: [ "node", "-r", "newrelic", "index.js" ]
+    ports:
+      - "6069:6069"
+    env_file: .env 
+    networks:
+      - stasher-network
+    tty: true
+    expose:
+      - "6069"    
+    
